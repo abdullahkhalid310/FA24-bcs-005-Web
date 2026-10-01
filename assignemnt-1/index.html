@@ -6,7 +6,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: rgb(249, 245, 245);
+            background-color: rgb(252, 248, 248);
             margin: 0;
             padding: 0;
         }
@@ -103,22 +103,42 @@
             background-color: #a1bedd;
             padding: 10px;
             border-radius: 15px;
+            position: relative;
+            transition: transform 0.3s ease;
             
+        }
+        .edu:hover{
+            transform: translateY(-10px);
         }
         .skills{
             background-color: #a1bedd;
             border-radius: 15px;
             padding: 10px;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+        .skills:hover{
+            transform: translateX(-10px);
         }
         .lan{
             background-color: #a1bedd;
             border-radius: 15px;
             padding: 10px;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+        .lan:hover{
+            transform: translateY(-10px);
         }
         .projects{
             background-color: #a1bedd;
             padding: 10px;
             border-radius: 15px;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+        .projects:hover{
+            transform: translateY(-10);
         }
         @media (max-width = 786px){
 
@@ -134,7 +154,7 @@
             <div class="header-info">
                 <h1>Abdullah Khalid</h1>
                 <p>Computer Science Student</p>
-                <p>Email: abdullah@gmail.com</p>
+                <p><a href="abdullah@gmail.com">abdullah@gmail.com</a></p>
                 <div class="links">
                     <a href="https://github.com/abdullahkhalid310" target="_blank">GitHub</a>
                     <a href="https://linkedin.com" target="_blank">LinkedIn</a>
