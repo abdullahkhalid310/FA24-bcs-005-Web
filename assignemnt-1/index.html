@@ -6,7 +6,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: lightgray;
+            background-color: rgb(249, 245, 245);
             margin: 0;
             padding: 0;
         }
@@ -25,6 +25,12 @@
             align-items: center;
             border-bottom: 2px solid black;
             padding-bottom: 20px;
+            position: sticky;
+            top: 0;
+            z-index:999 ;
+            background-color: #c3c3c3;
+            padding: 15px;
+            border-radius: 10px;
         }
 
         .header-info {
@@ -74,20 +80,48 @@
             color: darkblue;
             border-bottom: 1px solid gray;
             padding-bottom: 5px;
+            
         }
 
         ul {
             padding-left: 20px;
             margin: 10px 0;
+            
+            
         }
 
         li {
             margin-bottom: 5px;
+            
         }
 
         section h3 {
             margin-top: 15px;
             margin-bottom: 5px;
+        }
+        .edu{
+            background-color: #a1bedd;
+            padding: 10px;
+            border-radius: 15px;
+            
+        }
+        .skills{
+            background-color: #a1bedd;
+            border-radius: 15px;
+            padding: 10px;
+        }
+        .lan{
+            background-color: #a1bedd;
+            border-radius: 15px;
+            padding: 10px;
+        }
+        .projects{
+            background-color: #a1bedd;
+            padding: 10px;
+            border-radius: 15px;
+        }
+        @media (max-width = 786px){
+
         }
     </style>
 </head>
@@ -103,7 +137,7 @@
                 <p>Email: abdullah@gmail.com</p>
                 <div class="links">
                     <a href="https://github.com/abdullahkhalid310" target="_blank">GitHub</a>
-                    <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
+                    <a href="https://linkedin.com" target="_blank">LinkedIn</a>
                 </div>
             </div>
             
@@ -112,13 +146,16 @@
 
         <section>
             <h2>Education</h2>
-            <p><strong>BS Computer Science</strong></p>
-            <p>COMSATS University Islamabad</p>
-            <p>2024 - Present</p>
+            <div class = "edu">
+                <p><strong>BS Computer Science</strong></p>
+                <p>COMSATS University Islamabad</p>
+                <p>2024 - Present</p>
+            </div>
         </section>
 
         <section>
             <h2>Skills</h2>
+            <div class = "skills">
             <ul>
                 <li>Java</li>
                 <li>C++</li>
@@ -128,10 +165,12 @@
                 <li>CSS</li>
                 <li>Git & GitHub</li>
             </ul>
+        </div>
         </section>
 
         <section>
             <h2>Projects</h2>
+            <div class ="projects">
             <h3>Fitness Management System</h3>
             <p>A Java-based fitness management system developed using object-oriented programming concepts.</p>
             
@@ -140,18 +179,20 @@
 
             <h3>Nexus E Sports </h3>
             <p>A online Databe designed for E-Sports tournaments using sql</p>
-
+            </div>
             
         </section>
         <section>
                 <h2>
                     Languages
                 </h2>
+                <div class = "lan">
                 <ul>
                 <li><p><b>English</b>- Fluent</p></li>
                 <li><p><b>Urdu</b>- Native</p></li>
                 <li><p><b>German</b>- A2</p></li>
                 </ul>
+                </div>
         </section>
 
     </div>
