@@ -654,3 +654,166 @@ img { max-width: 100%; }
     z-index: 1020;
     background-color: white;
 }
+
+/* =================================
+   MEGA-MENU: DESKTOP + MOBILE
+   ================================= */
+
+/* Keep the navbar above page content */
+.store-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 2000;
+    background-color: #fff;
+}
+
+/* Desktop mega-menu trigger */
+.category-mega {
+    position: static;
+}
+
+.category-trigger {
+    text-decoration: underline;
+    text-decoration-color: hsl(35, 70%, 45%);
+    text-underline-offset: 5px;
+}
+
+/* Full-width dropdown panel */
+.mega-panel {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 28px 3%;
+    background-color: #fff;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 24px;
+    z-index: 2001;
+}
+
+/* Open on hover or keyboard focus */
+.category-mega:hover .mega-panel,
+.category-mega:focus-within .mega-panel {
+    display: grid;
+}
+
+/* Column headings */
+.mega-column h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+
+/* Remove default list styling */
+.mega-column ul,
+.mobile-category-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mega-column li {
+    margin-bottom: 10px;
+}
+
+/* Menu links */
+.mega-column a,
+.mobile-category-menu a {
+    color: #333;
+    text-decoration: none;
+}
+
+.mega-column a:hover,
+.mobile-category-menu a:hover {
+    color: hsl(35, 70%, 45%);
+    text-decoration: underline;
+}
+
+/* Mobile accordion hidden on desktop */
+.mobile-category-menu {
+    display: none;
+}
+
+/* =================================
+   CUSTOM BREAKPOINT: 605px
+   ================================= */
+
+@media (min-width: 605px) {
+    .mega-panel {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+
+    .mobile-category-menu {
+        display: none;
+    }
+}
+
+@media (max-width: 604.98px) {
+    /* Hide desktop mega-menu */
+    .category-mega {
+        display: none;
+    }
+
+    /* Show accordion inside collapsed navbar */
+    .mobile-category-menu {
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .mobile-category-menu details {
+        border-bottom: 1px solid #ddd;
+        padding: 12px 4px;
+    }
+
+    .mobile-category-menu summary {
+        cursor: pointer;
+        font-weight: 600;
+    }
+
+    .mobile-category-menu ul {
+        padding: 10px 0 0 15px;
+    }
+
+    .mobile-category-menu li {
+        margin: 10px 0;
+    }
+}
+@media (max-width: 604.98px) {
+    .mobile-category-menu {
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .mobile-category-menu details {
+        border-bottom: 1px solid #ddd;
+        padding: 12px 4px;
+    }
+
+    .mobile-category-menu summary {
+        cursor: pointer;
+        font-weight: 600;
+    }
+
+    .mobile-category-menu ul {
+        list-style: none;
+        padding: 10px 0 0 15px;
+        margin: 0;
+    }
+
+    .mobile-category-menu li {
+        margin: 10px 0;
+    }
+}
+
+@media (min-width: 605px) {
+    .mobile-category-menu {
+        display: none;
+    }
+}
+
+
+    

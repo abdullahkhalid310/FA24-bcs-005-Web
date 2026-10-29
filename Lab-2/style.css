@@ -46,3 +46,114 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+/* Mega-menu positioning */
+.store-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 2000;
+    background-color: white;
+}
+
+.category-mega {
+    position: static;
+}
+
+/* Desktop trigger */
+.category-trigger {
+    display: block;
+    padding: 8px;
+    color: #111;
+    text-decoration: none;
+}
+
+/* Hidden desktop panel */
+.mega-panel {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 30px 5%;
+    background: white;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 30px;
+    z-index: 2001;
+}
+
+/* Open on hover or keyboard focus */
+.category-mega:hover .mega-panel,
+.category-mega:focus-within .mega-panel {
+    display: grid;
+}
+
+.mega-column h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.mega-column ul,
+.mobile-category-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mega-column li {
+    margin-bottom: 10px;
+}
+
+.mega-column a,
+.mobile-category-menu a {
+    color: #333;
+    text-decoration: none;
+}
+
+.mega-column a:hover,
+.mobile-category-menu a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile accordion hidden on desktop */
+.mobile-category-menu {
+    display: none;
+}
+
+/* Match Bootstrap navbar-expand-lg */
+@media (min-width: 992px) {
+    .mobile-category-menu {
+        display: none;
+    }
+}
+
+/* Inside the collapsed hamburger menu */
+@media (max-width: 991.98px) {
+    .category-mega {
+        display: none;
+    }
+
+    .mobile-category-menu {
+        display: block;
+        width: 100%;
+    }
+
+    .mobile-category-menu details {
+        padding: 12px 0;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .mobile-category-menu summary {
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    .mobile-category-menu ul {
+        padding: 10px 0 0 15px;
+    }
+
+    .mobile-category-menu li {
+        padding: 6px 0;
+    }
+}
