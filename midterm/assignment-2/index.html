@@ -154,11 +154,18 @@
         <a class="navbar-brand store-logo" href="index.html">GYMSHARK</a>
 
         <div class="nav-icons">
-            <a href="#products" aria-label="Search"><i class="bi bi-search"></i></a>
-            <a href="#products" aria-label="Wishlist"><i class="bi bi-heart"></i></a>
-            <a href="#footer" aria-label="Account"><i class="bi bi-person"></i></a>
-            <a href="checkout.html" aria-label="Shopping bag"><i class="bi bi-bag"></i></a>
-        </div>
+    <a href="#products" aria-label="Search"><i class="bi bi-search"></i></a>
+    <a href="#products" aria-label="Wishlist"><i class="bi bi-heart"></i></a>
+    <a href="#footer" aria-label="Account"><i class="bi bi-person"></i></a>
+
+    <div class="cart-wrapper">
+        <a href="checkout.html" id="cart-toggle" aria-label="Shopping bag" aria-expanded="false">
+            <i class="bi bi-bag"></i>
+            <span id="cart-badge" class="cart-badge">0</span>
+        </a>
+        <div id="mini-cart" class="mini-cart" hidden></div>
+    </div>
+</div>
 
         <!-- Mobile accordion -->
        
